@@ -23,7 +23,7 @@ spec:
         production: false
     key: dev
   - ingress:
-      domain: ""
+      domain: "apps-crc.testing"
       externalDNS: false
       namespaceSubDomain: ""
       tls:
@@ -32,7 +32,7 @@ spec:
         production: false
     key: staging
   - ingress:
-      domain: ""
+      domain: "apps-crc.testing"
       externalDNS: false
       namespaceSubDomain: ""
       tls:

@@ -1,0 +1,54 @@
+apiVersion: core.jenkins-x.io/v4beta1
+kind: Requirements
+spec:
+  autoUpdate:
+    enabled: false
+    schedule: ""
+  cluster:
+    chartRepository: http://bucketrepo.jx/bucketrepo/charts
+    clusterName: kind
+    gitKind: github
+    gitName: github
+    gitServer: https://github.com
+    provider: openshift
+    registry: ghcr.io
+  environments:
+  - ingress:
+      domain: ""
+      externalDNS: false
+      namespaceSubDomain: ""
+      tls:
+        email: ""
+        enabled: false
+        production: false
+    key: dev
+  - ingress:
+      domain: ""
+      externalDNS: false
+      namespaceSubDomain: ""
+      tls:
+        email: ""
+        enabled: false
+        production: false
+    key: staging
+  - ingress:
+      domain: ""
+      externalDNS: false
+      namespaceSubDomain: ""
+      tls:
+        email: ""
+        enabled: false
+        production: false
+    key: production
+  ingress:
+    domain: apps-crc.testing
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  repository: bucketrepo
+  secretStorage: local
+  vault: {}
+  webhook: lighthouse

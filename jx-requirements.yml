@@ -1,6 +1,9 @@
 apiVersion: core.jenkins-x.io/v4beta1
 kind: Requirements
 spec:
+  versionStream:
+    url: https://github.com/davidrmcgee/jenkins-x-versions.git
+    ref: master
   autoUpdate:
     enabled: false
     schedule: ""
